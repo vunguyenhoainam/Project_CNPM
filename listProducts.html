@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Resful API ( Đồ án CNPM )</title>
+    <title>Đồ án CNPM</title>
     <link rel="shortcut icon" type="image/png" href="./assets/images/logo.png" />
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"                      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link
@@ -18,7 +18,7 @@
     <div class="effect-background"></div>
     <div class="wrapper" id="wrapper">
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="listProducts.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center">
                 <div class="sidebar-brand-icon">
                     <i class="fal fa-smile-beam"></i>
                 </div>
@@ -33,21 +33,21 @@
             </li>
             <hr class="sidebar-divider my-0">
             <li class="nav-item">
-                <a class="nav-link" href="listProducts.html">
+                <a class="nav-link" href="categoryProducts.html">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Danh mục sản phẩm</span>
                 </a>
             </li>
             <hr class="sidebar-divider my-0">
             <li class="nav-item">
-                <a class="nav-link" href="listProducts.html">
+                <a class="nav-link" href="proceeds.html">
                     <i class="fas fa-fw fa-calculator"></i>
                     <span>Thống kê doanh thu</span>
                 </a>
             </li>
             <hr class="sidebar-divider my-0">
             <li class="nav-item">
-                <a class="nav-link" href="listProducts.html">
+                <a class="nav-link" href="manageProducts.html">
                     <i class="fas fa-fw fa-warehouse-alt"></i>
                     <span>Quản lý Nhập - Xuất</span>
                 </a>
@@ -114,9 +114,10 @@
                                         <tr>
                                             <th>STT</th>
                                             <th>Tên sản phẩm</th>
+                                            <th>Thương hiệu</th>
                                             <th>Giá sản phẩm</th>
                                             <th>Giảm giá</th>
-                                            <th>Trạng thái</th>
+                                            <th>Số lượng</th>
                                             <th>Ảnh</th>
                                             <th>Mô tả</th>
                                             <th>Cập nhật</th>
@@ -150,6 +151,10 @@
                     <input type="text" class="form-control form-control-sm" name="name" spellcheck="false" aria-controls="dataTable">
                 </div>
                 <div class="property-product">
+                    <span>Thương hiệu <span class="note">(⁕)</span></span>
+                    <input type="text" class="form-control form-control-sm" name="category" spellcheck="false" aria-controls="dataTable">
+                </div>
+                <div class="property-product">
                     <span>Giá sản phẩm <span class="note">(⁕)</span></span>
                     <input type="text" class="form-control form-control-sm" name="price" spellcheck="false" aria-controls="dataTable">
                 </div>
@@ -158,11 +163,11 @@
                     <input type="text" class="form-control form-control-sm" name="discount" spellcheck="false" aria-controls="dataTable">
                 </div>
                 <div class="property-product">
-                    <span>Trạng thái <span class="note">(⁕)</span></span>
-                    <input type="text" class="form-control form-control-sm" name="status" spellcheck="false" aria-controls="dataTable">
+                    <span>Số lượng <span class="note">(⁕)</span></span>
+                    <input type="text" class="form-control form-control-sm" name="total" spellcheck="false" aria-controls="dataTable">
                 </div>
                 <div class="property-product">
-                    <span>Ảnh <span class="note">(⁕)</span></span>
+                    <span>Ảnh sản phẩm <span class="note">(⁕)</span></span>
                     <input type="text" class="form-control form-control-sm" name="img" spellcheck="false" aria-controls="dataTable">
                 </div>
                 <div class="property-product">
@@ -188,6 +193,10 @@
                     <input type="text" class="form-control form-control-sm" name="nameEdit" spellcheck="false" aria-controls="dataTable">
                 </div>
                 <div class="property-product">
+                    <span>Thương hiệu <span class="note">(⁕)</span></span>
+                    <input type="text" class="form-control form-control-sm" name="categoryEdit" spellcheck="false" aria-controls="dataTable">
+                </div>
+                <div class="property-product">
                     <span>Giá sản phẩm <span class="note">(⁕)</span></span>
                     <input type="text" class="form-control form-control-sm" name="priceEdit" spellcheck="false" aria-controls="dataTable">
                 </div>
@@ -196,8 +205,8 @@
                     <input type="text" class="form-control form-control-sm" name="discountEdit" spellcheck="false" aria-controls="dataTable">
                 </div>
                 <div class="property-product">
-                    <span>Trạng thái <span class="note">(⁕)</span></span>
-                    <input type="text" class="form-control form-control-sm" name="statusEdit" spellcheck="false" aria-controls="dataTable">
+                    <span>Số lượng <span class="note">(⁕)</span></span>
+                    <input type="text" class="form-control form-control-sm" name="totalEdit" spellcheck="false" aria-controls="dataTable">
                 </div>
                 <div class="property-product">
                     <span>Ảnh <span class="note">(⁕)</span></span>

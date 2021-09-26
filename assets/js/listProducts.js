@@ -32,9 +32,10 @@ function postProducts() {
     e.preventDefault();
     var dataPost = {
       nameProduct: document.querySelector("input[name='name']").value,
+      categoryProduct: document.querySelector("input[name='category']").value,
       priceProduct: document.querySelector("input[name='price']").value,
       discount: document.querySelector("input[name='discount']").value,
-      statusProduct: document.querySelector("input[name='status']").value,
+      totalProduct: document.querySelector("input[name='total']").value,
       imageProduct: document.querySelector("input[name='img']").value,
       description: document.querySelector("input[name='description']").value,
       id: Math.random(),
@@ -66,9 +67,10 @@ function postProducts() {
 
 
 var nameItem = document.querySelector("input[name='nameEdit']");
+var category = document.querySelector("input[name='categoryEdit']");
 var price = document.querySelector("input[name='priceEdit']");
 var discount = document.querySelector("input[name='discountEdit']");
-var statusItem = document.querySelector("input[name='statusEdit']");
+var totalItem = document.querySelector("input[name='totalEdit']");
 var img = document.querySelector("input[name='imgEdit']");
 var description = document.querySelector("input[name='descriptionEdit']");
 var idItem = document.querySelector("input[name='idEdit']");
@@ -83,9 +85,10 @@ function editProducts(idProduct) {
       });
       productEdit.map(function (item) {
         nameItem.value = item.nameProduct;
+        category.value = item.categoryProduct;
         price.value = item.priceProduct;
         discount.value = item.discount;
-        statusItem.value = item.statusProduct;
+        totalItem.value = item.totalProduct;
         img.value = item.imageProduct;
         description.value = item.description;
         idItem.value = item.id;
@@ -96,9 +99,10 @@ function editProducts(idProduct) {
       e.preventDefault();
       var dataPut = {
         nameProduct: nameItem.value,
+        categoryProduct: category.value,
         priceProduct: price.value,
         discount: discount.value,
-        statusProduct: statusItem.value,
+        totalProduct: totalItem.value,
         imageProduct: img.value,
         description: description.value,
         id: idItem.value,
@@ -161,9 +165,10 @@ function renderProducts(data) {
     return `<tr style="padding: 10px 0" class="product-${item.id}">
               <td>${index + 1}</td>
               <td>${item.nameProduct}</td>
+              <td>${item.categoryProduct}</td>
               <td>${item.priceProduct} VNĐ</td>
               <td>${item.discount} %</td>
-              <td>${item.statusProduct ? "Còn hàng" : "Hết hàng"}</td>
+              <td>${item.totalProduct}</td>
               <td>${item.imageProduct}</td>
               <td>${item.description}</td>
               <td><a href="#" onclick="editProducts('${item.id}')" class="btn-update btn-blue">Cập nhật</a></td>
