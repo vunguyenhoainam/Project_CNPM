@@ -1,0 +1,147 @@
+a {
+    text-decoration: none !important;
+  }
+  
+  table {
+    text-align: center;
+  }
+  
+  .effect-background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000;
+    z-index: 9;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s ease;
+  }
+  
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .btn-blue {  
+    color: #fff;
+    padding: 5px 10px;
+    background-color: #22d8b4;
+    border-radius: 5px;
+    transition: all .3s ease;
+  }
+  .btn-blue:hover{
+    color: #fff;
+    opacity: .8;
+  }
+  
+  .btn-red {
+    color: #fff;
+    padding: 5px 10px;
+    background-color: #e24f4f;
+    border-radius: 5px;
+    transition: all .3s ease;
+  }
+  .btn-red:hover{
+    color: #fff;
+    opacity: .8;
+  }
+  
+  .btn-addProduct {
+    color: #fff;
+    padding: 5px 10px;
+    background-color: #4e73df;
+    border-radius: 5px;
+    transition: all .3s ease;
+  }
+  .btn-addProduct:hover{
+    color: #fff;
+    opacity: .8;
+  }
+  
+  .popup-addProduct {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .popup-editProduct {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .popup-deleteProduct {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .popup-handle {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px; 
+    padding: 20px 25px; 
+    background-color: #fff;
+    transition: all .5s ease;
+    z-index: -999;
+  }
+  .popup-handle h4{
+    text-align: center;
+    padding: 10px 0 15px 0;
+  }
+  .popup-handle .extend {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .popup-handle .btn-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 180px;
+  }
+  .popup-handle .extend p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #e24f4f;
+    margin: 0;
+  }
+  .popup-handle .note{
+    color: #e24f4f;
+  }
+  .popup-handle .property-product{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0 0 0;
+  }
+  .popup-handle input{
+    display: inline-block;
+    width: 600px;
+    height: 35px;
+  }
+  .popup-deleteProduct {
+    width: 450px !important;
+  }
+  .popup-deleteProduct span{
+    text-align: center;
+    font-size: 18px;
+  }
+  .popup-deleteProduct .extend {
+    justify-content: center;
+  }
+  
+  .show-popup {
+    opacity: 1;
+    visibility: visible;
+    z-index: 999;
+  
+  }
+  .show-effect {
+    opacity: .6;
+    visibility: visible;
+  }
+  
+  
+  
+  

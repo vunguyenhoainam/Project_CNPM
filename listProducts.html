@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Resful API ( Đồ án CNPM )</title>
+    <link rel="shortcut icon" type="image/png" href="./assets/images/logo.png" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"                      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/dashboard.css">
+    <link rel="stylesheet" href="./assets/css/listProducts.css">
+</head>
+
+<body id="page-top">
+    <div class="effect-background"></div>
+    <div class="wrapper" id="wrapper">
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="listProducts.html">
+                <div class="sidebar-brand-icon">
+                    <i class="fal fa-smile-beam"></i>
+                </div>
+                <div class="sidebar-brand-text mx-2">ADMIN</div>
+            </a>
+            <hr class="sidebar-divider my-0">
+            <li class="nav-item">
+                <a class="nav-link" href="listProducts.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Danh sách sản phẩm</span>
+                </a>
+            </li>
+            <hr class="sidebar-divider my-0">
+            <li class="nav-item">
+                <a class="nav-link" href="listProducts.html">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Danh mục sản phẩm</span>
+                </a>
+            </li>
+            <hr class="sidebar-divider my-0">
+            <li class="nav-item">
+                <a class="nav-link" href="listProducts.html">
+                    <i class="fas fa-fw fa-calculator"></i>
+                    <span>Thống kê doanh thu</span>
+                </a>
+            </li>
+            <hr class="sidebar-divider my-0">
+            <li class="nav-item">
+                <a class="nav-link" href="listProducts.html">
+                    <i class="fas fa-fw fa-warehouse-alt"></i>
+                    <span>Quản lý Nhập - Xuất</span>
+                </a>
+            </li>
+            <hr class="sidebar-divider my-0">
+            <li class="nav-item">
+                <a class="nav-link btn-logout" href="#">
+                    <i class="fas fa-fw fa-sign-out-alt"></i>
+                    <span>Đăng xuất</span>
+                </a>
+            </li>
+            <hr class="sidebar-divider d-none d-md-block">
+        </ul>
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Nav Item - Alerts -->
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-bell fa-fw"></i>
+                                <!-- Counter - Alerts -->
+                                <span class="badge badge-danger badge-counter">9+</span>
+                            </a>
+                        </li>
+
+                        <!-- Nav Item - Messages -->
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-envelope fa-fw"></i>
+                                <!-- Counter - Messages -->
+                                <span class="badge badge-danger badge-counter">2</span>
+                            </a>
+                        </li>
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">admin@gmail.com</span>
+                                <img class="img-profile rounded-circle" src="./assets/images/admin.png">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="container-fluid">
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h4 class="m-0 font-weight-bold text-primary">Danh sách sản phẩm</h4>
+                            <a href="#" class="btn-addProduct" onclick="postProducts()"><i class="fas fa-fw fa-plus-square" style="margin-right: 5px;"></i>Thêm sản phẩm</a>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>STT</th>
+                                            <th>Tên sản phẩm</th>
+                                            <th>Giá sản phẩm</th>
+                                            <th>Giảm giá</th>
+                                            <th>Trạng thái</th>
+                                            <th>Ảnh</th>
+                                            <th>Mô tả</th>
+                                            <th>Cập nhật</th>
+                                            <th>Xóa</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="product-element"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span style="font-size: 16px;">Design 01/10/2021</span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <!-- ADD Products -->
+        <div class="popup-addProduct popup-handle card shadow mb-4">
+            <form>
+                <h4 class="m-0 font-weight-bold text-primary">Thêm mới sản phẩm</h4>
+                <div class="property-product">
+                    <span>Tên sản phẩm <span class="note">(⁕)</span></span>
+                    <input type="text" class="form-control form-control-sm" name="name" spellcheck="false" aria-controls="dataTable">
+                </div>
+                <div class="property-product">
+                    <span>Giá sản phẩm <span class="note">(⁕)</span></span>
+                    <input type="text" class="form-control form-control-sm" name="price" spellcheck="false" aria-controls="dataTable">
+                </div>
+                <div class="property-product">
+                    <span>Giảm giá <span class="note">(⁕)</span></span>
+                    <input type="text" class="form-control form-control-sm" name="discount" spellcheck="false" aria-controls="dataTable">
+                </div>
+                <div class="property-product">
+                    <span>Trạng thái <span class="note">(⁕)</span></span>
+                    <input type="text" class="form-control form-control-sm" name="status" spellcheck="false" aria-controls="dataTable">
+                </div>
+                <div class="property-product">
+                    <span>Ảnh <span class="note">(⁕)</span></span>
+                    <input type="text" class="form-control form-control-sm" name="img" spellcheck="false" aria-controls="dataTable">
+                </div>
+                <div class="property-product">
+                    <span>Mô tả <span class="note">(⁕)</span></span>
+                    <input type="text" class="form-control form-control-sm" name="description" spellcheck="false" aria-controls="dataTable">
+                </div>
+                <div class="extend">
+                    <p>(⁕) Trường bắt buộc không được bỏ trống.</p>
+                    <div class="btn-container">
+                        <a href="#" class="btn-add btn-blue">Thêm mới</a>
+                        <a href="#" class="btn-cancel-add btn-red">Hủy bỏ</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- EDIT Products -->
+        <div class="popup-editProduct popup-handle card shadow mb-4">
+            <form>
+                <h4 class="m-0 font-weight-bold text-primary">Cập nhật sản phẩm</h4>
+                <div class="property-product">
+                    <span>Tên sản phẩm <span class="note">(⁕)</span></span>
+                    <input type="text" class="form-control form-control-sm" name="nameEdit" spellcheck="false" aria-controls="dataTable">
+                </div>
+                <div class="property-product">
+                    <span>Giá sản phẩm <span class="note">(⁕)</span></span>
+                    <input type="text" class="form-control form-control-sm" name="priceEdit" spellcheck="false" aria-controls="dataTable">
+                </div>
+                <div class="property-product">
+                    <span>Giảm giá <span class="note">(⁕)</span></span>
+                    <input type="text" class="form-control form-control-sm" name="discountEdit" spellcheck="false" aria-controls="dataTable">
+                </div>
+                <div class="property-product">
+                    <span>Trạng thái <span class="note">(⁕)</span></span>
+                    <input type="text" class="form-control form-control-sm" name="statusEdit" spellcheck="false" aria-controls="dataTable">
+                </div>
+                <div class="property-product">
+                    <span>Ảnh <span class="note">(⁕)</span></span>
+                    <input type="text" class="form-control form-control-sm" name="imgEdit" spellcheck="false" aria-controls="dataTable">
+                </div>
+                <div class="property-product">
+                    <span>Mô tả <span class="note">(⁕)</span></span>
+                    <input type="text" class="form-control form-control-sm" name="descriptionEdit" spellcheck="false" aria-controls="dataTable">
+                </div>
+                <div class="property-product">
+                    <span>ID <span class="note">(⁕)</span></span>
+                    <input type="text" class="form-control form-control-sm" name="idEdit" disabled spellcheck="false" aria-controls="dataTable">
+                </div>
+                <div class="extend">
+                    <p>(⁕) Trường bắt buộc không được bỏ trống.</p>
+                    <div class="btn-container">
+                        <a href="#" class="btn-save btn-blue">Lưu lại</a>
+                        <a href="#" class="btn-cancel-edit btn-red">Hủy bỏ</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- DELETE Products -->
+        <div class="popup-deleteProduct popup-handle card shadow mb-4">
+            <span>Bạn có chắc chắn muốn xóa sản phẩm này ?</span>
+            <div class="extend">
+                <div class="btn-container">
+                    <a href="#" class="btn-confirm btn-blue">Xác nhận</a>
+                    <a href="#" class="btn-cancel-delete btn-red">Hủy bỏ</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./assets/js/listProducts.js"></script>
+    <script src="./assets/js/logout.js"></script>
+
+</body>
+</html>
