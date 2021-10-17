@@ -4,11 +4,15 @@ if (localStorage.getItem("dataAccount") === null) {
   window.location.href = "index.html";
 }
 
-var productsApi = "https://614075955cb9280017a112f9.mockapi.io/products";
+const productsApi = "https://614075955cb9280017a112f9.mockapi.io/products";
+const categoriesApi = "https://614075955cb9280017a112f9.mockapi.io/categories";
 
 function start() {
   getProducts(function (data) {
     renderProducts(data);
+  });
+  getCategories(function (data) {
+    renderCategories(data);
   });
 }
 start();
@@ -20,6 +24,14 @@ const $$ = document.querySelectorAll.bind(document);
 
 function getProducts(callback) {
   fetch(productsApi)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(callback);
+}
+
+function getCategories(callback) {
+  fetch(categoriesApi)
     .then(function (response) {
       return response.json();
     })
@@ -68,7 +80,7 @@ function postProducts() {
 }
 
 var nameItem = $("input[name='nameEdit']");
-var category = $("input[name='categoryEdit']");
+var category = $("select[name='categoryEdit']");
 var price = $("input[name='priceEdit']");
 var discount = $("input[name='discountEdit']");
 var totalItem = $("input[name='totalEdit']");
@@ -224,4 +236,12 @@ function renderProducts(data) {
               </tr>`;
   });
   listProducts.innerHTML = htmls.join("");
+}
+
+function renderCategories(data) {
+  var listCategories = $(".form-categories");
+  var htmls = data.map((item) => {
+    return `<option value="${item.name}">${item.name}</option>`;
+  });
+  listCategories.innerHTML = htmls.join("");
 }
