@@ -1,320 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Đồ án CNPM</title>
+    <link rel="shortcut icon" type="image/png" href="./assets/images/logo.png" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link
-      rel="shortcut icon"
-      type="image/png"
-      href="./assets/images/logo.png"
-    />
-    <link
-      rel="stylesheet"
-      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./assets/css/dashboard.css" />
-    <link rel="stylesheet" href="./assets/css/listProducts.css" />
-    <link rel="stylesheet" href="./assets/css/manageProducts.css" />
-  </head>
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/dashboard.css">
+    <link rel="stylesheet" href="./assets/css/listProducts.css">
+    <link rel="stylesheet" href="./assets/css/manageProducts.css">
+</head>
 
-  <body id="page-top">
+<body id="page-top">
     <div class="effect-background"></div>
     <div class="wrapper" id="wrapper">
-      <ul
-        class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion"
-        id="accordionSidebar"
-      >
-        <a
-          class="sidebar-brand d-flex align-items-center justify-content-center"
-        >
-          <div class="sidebar-brand-icon">
-            <i class="fal fa-smile-beam"></i>
-          </div>
-          <div class="sidebar-brand-text mx-2">ADMIN</div>
-        </a>
-        <hr class="sidebar-divider my-0" />
-        <li class="nav-item">
-          <a class="nav-link" href="listProducts.html">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Danh Sách Sản Phẩm</span>
-          </a>
-        </li>
-        <hr class="sidebar-divider my-0" />
-        <li class="nav-item">
-          <a class="nav-link" href="categoryProducts.html">
-            <i class="fas fa-fw fa-table"></i>
-            <span>Danh Mục Sản Phẩm</span>
-          </a>
-        </li>
-        <hr class="sidebar-divider my-0" />
-        <li class="nav-item">
-          <a class="nav-link" href="proceeds.html">
-            <i class="fas fa-fw fa-calculator"></i>
-            <span>Thống kê doanh thu</span>
-          </a>
-        </li>
-        <hr class="sidebar-divider my-0" />
-        <li class="nav-item">
-          <a class="nav-link" href="manageImportProducts.html">
-            <i class="fas fa-fw fa-warehouse-alt"></i>
-            <span>Quản Lý Nhập Kho</span>
-          </a>
-        </li>
-        <hr class="sidebar-divider my-0" />
-        <li class="nav-item">
-          <a class="nav-link" href="manageExportProducts.html">
-            <i class="fa fa-truck" aria-hidden="true"></i>
-            <span>Quản Lý Xuất Kho</span>
-          </a>
-        </li>
-        <hr class="sidebar-divider my-0" />
-        <li class="nav-item">
-          <a class="nav-link btn-logout" href="#">
-            <i class="fas fa-fw fa-sign-out-alt"></i>
-            <span>Đăng Xuất</span>
-          </a>
-        </li>
-        <hr class="sidebar-divider d-none d-md-block" />
-      </ul>
-
-      <!-- Content Wrapper -->
-      <div id="content-wrapper" class="d-flex flex-column">
-        <div id="content">
-          <nav
-            class="
-              navbar navbar-expand navbar-light
-              bg-white
-              topbar
-              mb-4
-              static-top
-              shadow
-            "
-          >
-            <ul class="navbar-nav ml-auto">
-              <!-- Nav Item - Alerts -->
-              <li class="nav-item dropdown no-arrow mx-1">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="alertsDropdown"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  <i class="fas fa-bell fa-fw"></i>
-                  <!-- Counter - Alerts -->
-                  <span class="badge badge-danger badge-counter">9+</span>
-                </a>
-              </li>
-
-              <!-- Nav Item - Messages -->
-              <li class="nav-item dropdown no-arrow mx-1">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="messagesDropdown"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  <i class="fas fa-envelope fa-fw"></i>
-                  <!-- Counter - Messages -->
-                  <span class="badge badge-danger badge-counter">2</span>
-                </a>
-              </li>
-
-              <div class="topbar-divider d-none d-sm-block"></div>
-
-              <!-- Nav Item - User Information -->
-              <li class="nav-item dropdown no-arrow">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="userDropdown"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  <span class="mr-2 d-none d-lg-inline text-gray-600 small"
-                    >admin@gmail.com</span
-                  >
-                  <img
-                    class="img-profile rounded-circle"
-                    src="./assets/images/admin.png"
-                  />
-                </a>
-              </li>
-            </ul>
-          </nav>
-
-          <div class="container-fluid">
-            <div class="card shadow mb-4">
-              <div class="card-header py-3">
-                <h4 class="m-0 font-weight-bold text-primary">
-                  Quản Lý Xuất Kho
-                </h4>
-                <a href="#" class="btn-addProduct" onclick="postProducts()"
-                  ><i
-                    class="fas fa-fw fa-plus-square"
-                    style="margin-right: 5px"
-                  ></i
-                  >Xuất thêm sản phẩm</a
-                >
-              </div>
-
-              <div class="card-body">
-                <div class="table-responsive">
-                  <table
-                    class="table table-bordered"
-                    id="dataTable"
-                    width="100%"
-                    cellspacing="0"
-                  >
-                    <thead>
-                      <tr>
-                        <th>STT</th>
-                        <th>Tên sản phẩm</th>
-                        <th>Thương hiệu</th>
-                        <th>Số lượng xuất</th>
-                        <th>Giá đơn hàng</th>
-                        <th>Ngày xuất</th>
-                        <th>Xóa</th>
-                      </tr>
-                    </thead>
-                    <tbody class="product-element"></tbody>
-                  </table>
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center">
+                <div class="sidebar-brand-icon">
+                    <i class="fal fa-smile-beam"></i>
                 </div>
-              </div>
+                <div class="sidebar-brand-text mx-2">ADMIN</div>
+            </a>
+            <hr class="sidebar-divider my-0">
+            <li class="nav-item">
+                <a class="nav-link" href="listProducts.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Danh Sách Sản Phẩm</span>
+                </a>
+            </li>
+            <hr class="sidebar-divider my-0">
+            <li class="nav-item">
+                <a class="nav-link" href="categoryProducts.html">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Danh Mục Sản Phẩm</span>
+                </a>
+            </li>
+            <hr class="sidebar-divider my-0">
+            <li class="nav-item">
+                <a class="nav-link" href="proceeds.html">
+                    <i class="fas fa-fw fa-calculator"></i>
+                    <span>Thống kê doanh thu</span>
+                </a>
+            </li>
+            <hr class="sidebar-divider my-0">
+            <li class="nav-item">
+                <a class="nav-link" href="manageImportProducts.html">
+                    <i class="fas fa-fw fa-warehouse-alt"></i>
+                    <span>Quản Lý Nhập Kho</span>
+                </a>
+            </li>
+            <hr class="sidebar-divider my-0">
+            <li class="nav-item">
+                <a class="nav-link" href="manageExportProducts.html">
+                    <i class="fa fa-truck" aria-hidden="true"></i>
+                    <span>Quản Lý Xuất Kho</span>
+                </a>
+            </li>
+            <hr class="sidebar-divider my-0">
+            <li class="nav-item">
+                <a class="nav-link btn-logout" href="#">
+                    <i class="fas fa-fw fa-sign-out-alt"></i>
+                    <span>Đăng Xuất</span>
+                </a>
+            </li>
+            <hr class="sidebar-divider d-none d-md-block">
+        </ul>
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Nav Item - Alerts -->
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-bell fa-fw"></i>
+                                <!-- Counter - Alerts -->
+                                <span class="badge badge-danger badge-counter">9+</span>
+                            </a>
+                        </li>
+
+                        <!-- Nav Item - Messages -->
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-envelope fa-fw"></i>
+                                <!-- Counter - Messages -->
+                                <span class="badge badge-danger badge-counter">2</span>
+                            </a>
+                        </li>
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">admin@gmail.com</span>
+                                <img class="img-profile rounded-circle" src="./assets/images/admin.png">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="container-fluid">
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h4 class="m-0 font-weight-bold text-primary">Quản Lý Xuất Kho</h4>
+                            <div class="input-sort dp-bl">
+                                <span>Tên sản phẩm: </span>
+                                <select class="sort" id="selCat" onchange="filterCat()">
+
+                                </select>
+                            </div>
+
+                            <div class="input-sort dp-bl">
+                                <span>Ngày nhập: </span><br>
+                                <input type="date" name="dateSel" id="" onchange="filterDate()">
+                                </select>
+                            </div>
+
+                            <a href="#" class="btn-addProduct" onclick="postProducts()"><i class="fas fa-fw fa-plus-square" style="margin-right: 5px;"></i>Xuất thêm sản phẩm</a>
+                        </div>
+
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>STT</th>
+                                            <th>Tên sản phẩm</th>
+                                            <th>Thương hiệu</th>
+                                            <th>Số lượng xuất</th>
+                                            <th>Giá đơn hàng</th>
+                                            <th>Ngày nhập</th>
+                                            <th>Xóa đơn</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="product-element"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
+
+            <!-- Thêm sản phẩm -->
+            <div class="popup-addProduct popup-handle card shadow mb-4">
+                <form>
+                    <h4 class="m-0 font-weight-bold text-primary">Thông Tin Sản Phẩm Xuất Kho</h4>
+
+                    <div class="property-product">
+                        <span>Kho <span class="note">(⁕)</span></span>
+                        <select class="form-control form-control-sm" name="selBoxExport" id="selbox-manage" onchange="renderInputAddProduct()"></select>
+                    </div>
+                    <div class="property-product">
+                        <span>Tên sản phẩm <span class="note">(⁕)</span></span>
+                        <input type="text" class="form-control form-control-sm" name="name" disabled spellcheck="false" aria-controls="dataTable">
+                    </div>
+                    <div class="property-product">
+                        <span>Thương hiệu <span class="note">(⁕)</span></span>
+                        <input type="text" class="form-control form-control-sm" name="category" disabled spellcheck="false" aria-controls="dataTable">
+                    </div>
+                    <div class="property-product">
+                        <span>Giá sản phẩm <span class="note">(⁕)</span></span>
+                        <input type="text" class="form-control form-control-sm" name="price" disabled spellcheck="false" aria-controls="dataTable">
+                    </div>
+                    <div class="property-product">
+                        <span>Số lượng xuất <span class="note">(⁕)</span></span>
+                        <input type="text" class="form-control form-control-sm" name="totalExport" spellcheck="false" aria-controls="dataTable">
+                    </div>
+                    <div class="property-product">
+                        <span>Ngày xuất <span class="note">(⁕)</span></span>
+                        <input type="date" class="form-control form-control-sm" name="dateExport" spellcheck="false" aria-controls="dataTable">
+                    </div>
+                    <div class="property-product">
+                        <span>ID sản phẩm <span class="note">(⁕)</span></span>
+                        <input type="text" class="form-control form-control-sm" name="idExport" disabled spellcheck="false" aria-controls="dataTable">
+                    </div>
+                    <div class="extend">
+                        <p>(⁕) Trường bắt buộc không được bỏ trống.</p>
+                        <div class="btn-container">
+                            <a href="#" class="btn-add btn-blue">Xác nhận</a>
+                            <a href="#" class="btn-cancel-add btn-red">Hủy bỏ</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="popup-deleteProduct popup-handle card shadow mb-4">
+                <span>Bạn có chắc chắn muốn xóa đơn hàng này ?</span>
+                <div class="extend">
+                    <div class="btn-container">
+                        <a href="#" class="btn-confirm btn-blue">Xác nhận</a>
+                        <a href="#" class="btn-cancel-delete btn-red">Hủy bỏ</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span style="font-size: 16px;">Design 01/10/2021</span>
+                    </div>
+                </div>
+            </footer>
         </div>
-
-        <!-- Thêm sản phẩm -->
-        <div class="popup-addProduct popup-handle card shadow mb-4">
-          <form>
-            <h4 class="m-0 font-weight-bold text-primary">
-              Thông Tin Sản Phẩm Xuất Kho
-            </h4>
-
-            <div class="property-product">
-              <span>Kho <span class="note">(⁕)</span></span>
-              <select
-                class="form-control form-control-sm"
-                name="selBoxExport"
-                id="selbox-manage"
-                onchange="renderInputAddProduct()"
-              ></select>
-            </div>
-            <div class="property-product">
-              <span>Tên sản phẩm <span class="note">(⁕)</span></span>
-              <input
-                type="text"
-                class="form-control form-control-sm"
-                name="name"
-                disabled
-                spellcheck="false"
-                aria-controls="dataTable"
-              />
-            </div>
-            <div class="property-product">
-              <span>Thương hiệu <span class="note">(⁕)</span></span>
-              <input
-                type="text"
-                class="form-control form-control-sm"
-                name="category"
-                disabled
-                spellcheck="false"
-                aria-controls="dataTable"
-              />
-            </div>
-            <div class="property-product">
-              <span>Giá sản phẩm <span class="note">(⁕)</span></span>
-              <input
-                type="text"
-                class="form-control form-control-sm"
-                name="price"
-                disabled
-                spellcheck="false"
-                aria-controls="dataTable"
-              />
-            </div>
-            <div class="property-product">
-              <span>Số lượng nhập <span class="note">(⁕)</span></span>
-              <input
-                type="text"
-                class="form-control form-control-sm"
-                name="totalExport"
-                spellcheck="false"
-                aria-controls="dataTable"
-              />
-            </div>
-            <div class="property-product">
-              <span>Ngày xuất <span class="note">(⁕)</span></span>
-              <input
-                type="date"
-                class="form-control form-control-sm"
-                name="dateExport"
-                spellcheck="false"
-                aria-controls="dataTable"
-              />
-            </div>
-            <div class="property-product">
-              <span>ID sản phẩm <span class="note">(⁕)</span></span>
-              <input
-                type="text"
-                class="form-control form-control-sm"
-                name="idExport"
-                disabled
-                spellcheck="false"
-                aria-controls="dataTable"
-              />
-            </div>
-            <div class="extend">
-              <p>(⁕) Trường bắt buộc không được bỏ trống.</p>
-              <div class="btn-container">
-                <a href="#" class="btn-add btn-blue">Xác nhận</a>
-                <a href="#" class="btn-cancel-add btn-red">Hủy bỏ</a>
-              </div>
-            </div>
-          </form>
-        </div>
-
-        <div class="popup-deleteProduct popup-handle card shadow mb-4">
-          <span>Bạn có chắc chắn muốn xóa đơn hàng này ?</span>
-          <div class="extend">
-            <div class="btn-container">
-              <a href="#" class="btn-confirm btn-blue">Xác nhận</a>
-              <a href="#" class="btn-cancel-delete btn-red">Hủy bỏ</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Footer -->
-        <footer class="sticky-footer bg-white">
-          <div class="container my-auto">
-            <div class="copyright text-center my-auto">
-              <span style="font-size: 16px">Design 01/10/2021</span>
-            </div>
-          </div>
-        </footer>
-      </div>
     </div>
 
     <script src="./assets/js/manageExportProducts.js"></script>
     <script src="./assets/js/logout.js"></script>
-  </body>
+
+</body>
 </html>
