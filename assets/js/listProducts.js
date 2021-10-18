@@ -12,7 +12,8 @@ function start() {
     renderProducts(data);
   });
   getCategories(function (data) {
-    renderCategories(data);
+    renderCategoriesAdd(data);
+    renderCategoriesEdit(data);
   });
 }
 start();
@@ -46,7 +47,7 @@ function postProducts() {
     e.preventDefault();
     var dataPost = {
       nameProduct: $("input[name='name']").value,
-      categoryProduct: $("input[name='category']").value,
+      categoryProduct: $("select[name='category']").value,
       priceProduct: $("input[name='price']").value,
       discount: $("input[name='discount']").value,
       totalProduct: $("input[name='total']").value,
@@ -238,8 +239,16 @@ function renderProducts(data) {
   listProducts.innerHTML = htmls.join("");
 }
 
-function renderCategories(data) {
-  var listCategories = $(".form-categories");
+function renderCategoriesAdd(data) {
+  var listCategories = $(".form-categories-add");
+  var htmls = data.map((item) => {
+    return `<option value="${item.name}">${item.name}</option>`;
+  });
+  listCategories.innerHTML = htmls.join("");
+}
+
+function renderCategoriesEdit(data) {
+  var listCategories = $(".form-categories-edit");
   var htmls = data.map((item) => {
     return `<option value="${item.name}">${item.name}</option>`;
   });
