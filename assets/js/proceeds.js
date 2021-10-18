@@ -17,14 +17,13 @@ function getProducts(callback) {
     .then(callback);
 }
 
-
 function renderProducts(data) {
-    var listProducts = document.querySelector(".product-element");
-    var totalProceed = 0;
-    var htmls = data.map((item, index) => {
-        var totalSales = item.priceProduct * item.totalSale; 
-        totalProceed += totalSales;
-        return `<tr style="padding: 10px 0" class="product-${item.id}">
+  var listProducts = document.querySelector(".product-element");
+  var totalProceed = 0;
+  var htmls = data.map((item, index) => {
+    var totalSales = item.priceProduct * item.totalSale;
+    totalProceed += totalSales;
+    return `<tr style="padding: 10px 0" class="product-${item.id}">
                 <td>${index + 1}</td>
                 <td>${item.nameProduct}</td>
                 <td>${item.categoryProduct}</td>
@@ -32,9 +31,7 @@ function renderProducts(data) {
                 <td>${item.totalSale}</td>
                 <td>${totalSales} VNĐ</td>
               </tr>`;
-    });
-    listProducts.innerHTML = htmls.join("");
-    document.querySelector('.totalProceeds').innerHTML = totalProceed + " VND ";
-  }
-
-  
+  });
+  listProducts.innerHTML = htmls.join("");
+  document.querySelector(".totalProceeds").innerHTML = totalProceed + " VND ";
+}
